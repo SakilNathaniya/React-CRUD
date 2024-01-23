@@ -12,7 +12,9 @@ const HomePage = () => {
   const getProducts = async () => {
     try {
       setIsLoading(true);
-      const response = await axios.get("http://localhost:3000/api/products");
+      const response = await axios.get(
+        "https://crudapi-r88g.onrender.com/api/products"
+      );
       console.log(response.data);
       setProducts(response.data);
       setIsLoading(false);
